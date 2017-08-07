@@ -1,0 +1,394 @@
+/*Main styles*/
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+@font-face{
+	font-family:OpenSans;
+	src:url(./fonts/OpenSansLight.ttf);
+}
+*{	font-family:OpenSans;
+	font-size: 13px;
+	line-height: 18px;
+	
+}
+/*End Main styles*/
+
+
+/*Clearfix*/
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*Clearfix*/
+
+.header{
+	background: url(img/header-dotted.png) repeat-x 0 0, 
+	url(img/header-dotted.png) repeat-x 0 100% #3e4c54 ;
+}
+.inner-header{
+	background: url(img/header-white-light.png)no-repeat 50% 100%;
+
+}
+.wrapper{
+	width: 960px;
+	margin: 0 auto;
+}
+header .header-list li {
+	float: left;
+}
+.header-des{
+	font-size: 18px;
+	color: #ccc;
+	line-height: 20px;
+	margin: 20px 57px 0 20px;
+}
+.basket{
+padding: 24px 0 24px 55px;
+background: url(img/bskt.png) no-repeat 0 50%;
+display: block;
+color: #fff;
+
+}
+
+.basket span{
+	font-size: 18px;
+}
+.info{ 
+text-align:right;	}
+
+.socials li{
+float: right;
+margin-left: 5px;
+}
+.socials li a{
+	height: 18px;
+	width: 18px;
+	display: block;
+	background: url(img/social-sprite.png)no-repeat 0 0;
+	margin: 10px 0;
+}
+.socials li a.fb{
+	background-position: -23px
+}
+
+.socials li a.tw{
+	background-position: -46px
+}
+.phone{
+	font-size: 16px;
+	color: #fff;
+	display: block;
+	clear: right;
+}
+.registration li{
+	float: right;
+	margin-left: 7px;
+	color: #90989c;
+}
+.registration li a{
+	color: #90989c;
+	text-decoration: underline;
+}
+/*Top Menu*/
+.top-menu{
+	background: #1c1c1c;
+}
+.nav-inner{
+	background: url(img/nav-white-light.png)no-repeat 50% 0;	
+}
+nav>ul>li{
+	
+	float: left;
+	transition: 1s ease-out 0.5s
+}
+nav>ul>li>a{
+	color: #999999;
+	text-transform: uppercase;
+	display: block;
+	padding: 20px 15px;
+    transition:color.3s
+	
+}
+nav>ul>li>a:hover{
+	color: #fff;
+	background: #2f2f2f;
+}
+
+
+.submenu{
+	display: none;
+	position: relative;	
+}
+
+li:hover .submenu{
+	position: absolute;
+	display: block;
+	background: #333333;
+	z-index: 2;
+
+}
+
+
+.submenu a{
+	color: #999999;
+	display: block;
+	padding: 20px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	transition:color.3s
+
+}
+.submenu a:hover{
+	
+	color: #fff;
+	background: #2f2f2f;
+}
+.inner-m{
+	background: url(img/bg-white-light.png)no-repeat 0 50%;
+}
+
+/*End Top Menu*/
+
+/*Sidebar*/
+main{
+	background: url(img/bg-white-light.png)repeat-x 0 0 #fff;
+	padding: 25px 0 40px 0;
+}
+
+.sidebar{
+	float: left;
+	width: 250px;
+}
+.products-list{
+	padding: 0 0 35px 10px;
+}
+.products-list a{
+	text-transform: uppercase;
+	color: #6b8492;
+	font-size: 18px;
+}
+.products-list a.current {
+text-decoration: underline;
+}
+.products-list a:hover{
+	text-decoration: underline;
+}
+.sb-block .title{
+color: #fff;
+text-transform: uppercase;
+background: #899da8;
+padding: 4px 0 4px 9px;
+}
+
+.options ul{
+	padding: 3px 0 14px 5px;
+	background: #f7f7f7;
+}
+
+.options .chine, .size{
+	color: #f36720;
+	padding-left: 10px;
+	background: url(img/x-no-active.png) no-repeat 0 50%;
+
+}
+.options .chine:hover, .size:hover{
+	background: url(img/x-active.png) no-repeat 0 50%;
+}
+.options .reset{
+	color: #333333;
+	text-decoration: underline;
+	padding: 10px 0 0 5px;
+	display: block;
+}
+.sb-block{
+	margin-bottom: 20px;
+}
+.manufacturer ul{
+	padding: 8px 0 0 9px;
+}
+.manufacturer a{
+	margin-left: 9px;
+	color: #000;
+}
+.seasons ul{
+	padding: 8px 0 0 9px;
+}
+.seasons li{
+	display: inline-block;
+	width: 70px;
+	margin-right: 15px;
+	margin-bottom: 3px;
+
+}
+.sizes ul{
+	padding: 8px 0 0 9px;
+}
+.sizes li{
+	display: inline-block;
+	width: 60px;
+	margin-right: 15px;
+}
+.price ul{
+	padding: 8px 0 0 9px;
+
+}
+.price a{
+	color: #333333;
+}
+.price a:hover{
+	text-decoration: underline;
+}
+.new-sale li{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.new-sale ul{
+	padding: 8px 0 0 9px;
+}
+.materials li{
+	display: inline-block;
+	margin-right: 22px;
+}
+.materials ul{
+	padding: 8px 0 0 9px;
+}
+.colors ul{
+padding: 8px 0 0 9px;
+}
+.colors li{
+	display: inline-block;
+	width: 70px;
+	margin-right: 15px;
+	margin-bottom: 3px;
+}
+.contacts{
+	padding: 8px 0 5px 9px;
+	background: #f7f7f7;
+}
+
+.contacts li{
+	color: #666666;
+	margin-bottom: 10px;
+}
+.contacts a{
+	color: #666666;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.map a{
+	margin-left: 14px;
+}
+.map{
+	background: url(img/contacts-map.png) no-repeat 0 2px;
+	
+}
+
+/*Главная*/
+.right-col{
+	width: 688px;
+	margin-right: 20px;
+	float: right;
+}
+.search-b{
+	border:1px solid #6b8492;
+	margin-bottom: 30px;
+}
+.search-form{
+	float: right;
+}
+.search-form .search-i{
+	background: transparent;
+	border:none;
+	color: #9aaab3;
+}
+.search-form .btn-search{
+color: #fff;
+background: #6b8492;
+padding: 6px 20px;
+border:none;
+}
+
+.tags{
+	padding: 6px 14px;
+	background: url(img/pimp.png) no-repeat 100% 0 #fff;
+	width: 400px;
+}
+/*product list*/
+.products-list>li{
+	display: inline-block;
+	margin: 0 10px 45px 0;
+	min-height: 294px;
+	float: left;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	position: relative;
+
+}
+.products-list>li:hover{
+border: 1px solid #6b8492;
+cursor: pointer;
+box-shadow: 0 0 2px #6b8492;
+background: url(img/bskt-buy.png) 95% 96% no-repeat;
+}
+.products-list>li.active{
+	border: 1px solid #6b8492;
+	cursor: pointer;
+	box-shadow: 0 0 2px #6b8492;
+	background: url(img/bskt-buy.png) 95% 96% no-repeat;
+}
+
+
+.products-list>li:nth-child(4n){
+	margin-right: 0;
+}
+.products-list>li>img{
+border: 1px solid #6b8492;
+}
+.product{
+	padding-left: 10px;
+}
+
+
+.price-block .old-price{
+	color: #f36720;
+	text-decoration: line-through;
+
+}
+.price-block .price{
+	font-size: 18px;
+	color: #6b8492;	
+	position: absolute;
+	left: 10px;
+	bottom: 8px;
+
+}
+.special{
+	position: absolute;
+	top: 10px;
+	right: -11px;
+	color: #fff;
+}
+.special .new{
+		background: url(img/new.png) no-repeat 0 0;	
+		padding: 3px 15px;
+}
+
+.special-sale{
+	position: absolute;
+	top: 10px;
+	right: -1px;
+	color: #fff;
+}
+.special-sale .sale{
+	background: url(img/sale.png) no-repeat 0 0;	
+	padding: 3px 15px;
+}

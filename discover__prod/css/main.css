@@ -1,0 +1,309 @@
+@import "http://fonts.fontstorage.com/import/lato.css";
+@import "http://fonts.fontstorage.com/import/raleway.css";
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+* {
+  box-sizing: border-box; }
+
+.wrapper {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  height: auto;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+.hidden {
+  display: none; }
+
+h1, h2, h3, h4, h5, h5 {
+  margin: 0; }
+
+ul > li {
+  list-style: none;
+  display: inline-block; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+ul {
+  margin-bottom: 0; }
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: medium none; }
+
+
+input {
+  outline: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+button {
+  outline: none;
+  border: none 0; }
+
+
+.header {
+  width: 100%;
+ 
+  margin: 0 auto;
+  height: auto;
+
+  background: url("../img/header__bg.png") 50% 0 no-repeat;
+  background-size: cover;
+  padding: 55px 0 155px; }
+
+.header__phone {
+  display: block;
+  color: #ffd119;
+  font-family: "MyriadProRegular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px; }
+
+.navigation {
+  display: block;
+  margin-bottom: 90px; }
+
+.header__logo {
+  display: inline-block;
+  vertical-align: top; }
+
+.header__menu {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  margin-top: 45px; }
+  .header__menu li {
+    display: inline-block;
+    padding: 0 13px;
+    position: relative; }
+    .header__menu li a {
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none; }
+    .header__menu li .submenu {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 100%;
+      min-width: 182px;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      background-color: white;
+      transition: 0.5s ease-in-out;
+      text-align: center;
+      padding: 15px 0 20px; }
+      .header__menu li .submenu li {
+        display: block;
+        margin-bottom: 10px; }
+        .header__menu li .submenu li .menu__link-title {
+          color: black;
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          cursor: pointer; }
+          .header__menu li .submenu li .menu__link-title:hover {
+            color: black; }
+        .header__menu li .submenu li a {
+          color: black;
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px;
+          text-transform: none;
+          cursor: pointer; }
+          .header__menu li .submenu li a:hover {
+            color: #ffd119; }
+        .header__menu li .submenu li:first-child {
+          margin-bottom: 30px;
+          position: relative; }
+          .header__menu li .submenu li:first-child:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #ffd119; }
+    .header__menu li:last-child {
+      padding: 0 0 0 15px; }
+  .header__menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1; }
+
+#menu {
+  display: none;
+  list-style: none;
+  z-index: 150; }
+  #menu li {
+    display: block; }
+    #menu li a {
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      z-index: 2;
+      cursor: pointer; }
+    #menu li .submenu {
+      position: relative;
+      width: 100%;
+      z-index: 1000;
+      padding: 10px 5px; }
+      #menu li .submenu li {
+        display: block;
+        text-align: right; }
+        #menu li .submenu li a {
+          color: white;
+          font-family: "Lato", sans-serif;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          padding: 0 15px;
+          text-transform: none; }
+        #menu li .submenu li a.menu__link-title {
+          display: none !important; }
+
+#menu-toggle {
+  display: none; }
+
+#menu li,
+#menu li a {
+  display: block;
+  line-height: 1;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+#menu ul {
+  display: none; }
+
+#menu > li > a {
+  padding: 15px 0; }
+  #menu > li > a:hover {
+    color: #ffd119; }
+
+#menu ul li.has-sub > a:after {
+  display: none; }
+
+/*Change toggle size by adjusting width & height*/
+.tb-menu-toggle {
+  border: 0;
+  position: relative;
+  background: transparent;
+  cursor: pointer; }
+
+/*Change toggle color here*/
+.tb-menu-toggle i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  transition: all .2s; }
+
+.tb-menu-toggle i:nth-child(2) {
+  top: 40%; }
+
+.tb-menu-toggle i:nth-child(3) {
+  top: 80%; }
+
+/* Style the active toggle here */
+/*Animation of the toggle*/
+.tb-menu-toggle.tb-animate-toggle i:first-child,
+.tb-menu-toggle.tb-animate-toggle i:nth-child(2) {
+  top: 40%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.tb-menu-toggle.tb-animate-toggle i:nth-child(3) {
+  top: 40%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.heading {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0  0 40px;
+  letter-spacing: 3px; }
+
+.btn {
+  display: block;
+  max-width: 208px;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  box-shadow: 0 0 5px #ffd114;
+  background-color: #ffd119;
+  text-align: center;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.5s; }
+  .btn:hover {
+  box-shadow: 0 7px 10px #ffd114;
+}

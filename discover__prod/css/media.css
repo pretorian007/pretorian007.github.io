@@ -1,0 +1,102 @@
+@media only screen and (min-width: 250px) and (max-width: 479px) {
+  .header {
+    padding: 15px 0 155px;
+    height: 100vh; }
+  .heading {
+    font-size: 24px;
+    line-height: 35px;
+    margin: 0 0 50px; }
+  .header__menu {
+    display: none; }
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: 15px; }
+  #menu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #2e3033;
+    padding: 105px 15px 15px;
+    text-align: right;
+    height: 100vh; }
+  .tb-menu-toggle i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 100%;
+    height: 10%;
+    transition: all .2s; }
+  .tb-menu-toggle i:nth-child(2) {
+    max-width: 25px; }
+  .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:nth-child(2) {
+    max-width: 100%; }
+  .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transition: all .2s; }
+    .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:first-child {
+      max-width: 100%; }
+    .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:last-child {
+      max-width: 100%; }
+  #menu-toggle.tb-menu-toggle.tb-active-toggle.tb-animate-toggle {
+    top: 75px;
+    z-index: 9999; } }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .header {
+    padding: 15px 0 155px;
+    height: 100vh; }
+  .heading {
+    font-size: 24px;
+    line-height: 35px;
+    margin: 0 0 50px; }
+  .header__menu {
+    display: none; }
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    top: 75px;
+    right: 15px; }
+  #menu {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #2e3033;
+    padding: 105px 15px 15px;
+    text-align: right;
+    height: 100vh; }
+  .tb-menu-toggle i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 100%;
+    height: 10%;
+    transition: all .2s; }
+  .tb-menu-toggle i:nth-child(2) {
+    max-width: 25px; }
+  .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:nth-child(2) {
+    max-width: 100%; }
+  .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transition: all .2s; }
+    .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:first-child {
+      max-width: 100%; }
+    .tb-menu-toggle.tb-active-toggle.tb-animate-toggle i:last-child {
+      max-width: 100%; }
+  #menu-toggle.tb-menu-toggle.tb-active-toggle.tb-animate-toggle {
+    top: 75px;
+    z-index: 1024; } }
+

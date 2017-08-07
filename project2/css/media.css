@@ -1,0 +1,46 @@
+@media screen and (max-width: 1120px){
+.header-main .popular-p {padding: 10px 0px}
+.s-place{ margin: 15px; padding: 15px
+}
+
+}
+
+@media screen and (max-width: 1120px){
+.cat {display: none;}
+
+}
+@media screen and (max-width: 1901px){
+.cat5 {display: none;}
+
+}
+@media screen and (max-width: 1750px){
+.cat1 {display: none;}
+
+}
+
+@media screen and (max-width: 993px){
+.main-search-b {right: 15%;
+bottom: 35%;}
+
+}
+@media screen and (max-width: 320px){
+.main-search-b {right: 15%;
+bottom: 43%;}
+
+}
+
+
+@media screen and (max-width: 320px){
+.header-main h1 {font-size: 60px !important}
+.sign-up h2 {font-size: 60px !important}
+.journey-cities{display: grid;}
+.journey, .cities{margin-top: 8px;}
+.main-search-b {right: 15%;bottom: 56%;}
+}
+
+@media screen and (max-width: 768px){
+	.navbar-nav-search{
+		display: none;
+		
+	}
+}

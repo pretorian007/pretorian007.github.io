@@ -1,0 +1,40 @@
+@media screen and (max-width: 1200px){
+	.scroll-icon{display: none;}
+}
+
+
+@media screen and (min-width: 768px) {
+	.dropdown:hover > .dropdown-menu { display: block;background: #fcff19; }  
+	.navbar-nav{float: right!important;}
+	
+
+}
+@media screen and (max-width: 360px){
+	.navbar-toggle{width: 100%; float: none;}
+	.navbar-header{text-align: center;}
+	.carousel{display: none;}
+
+	header{background: url(../img/slider1.jpg) no-repeat 0 0}
+	.carousel h3{display: block;}
+}
+
+@media screen and (max-width: 767px) {
+	header{background: url(../img/slider1.jpg) no-repeat 0 0;
+		width: 100%;
+		background-size: cover;}
+		.navbar-nav{font-size: 30px!important;}
+		.carousel{display: none;}
+		.navbar-default .navbar-nav > .open > a, 
+		.navbar-default .navbar-nav > .open > a:focus, 
+		.navbar-default .navbar-nav > .open > a:hover {
+			color: #555!important;
+			background: #eeeeee!important;}
+			.navbar-toggle {background: #eeeeee!important;}
+			.select{position:initial!important;}
+			.selectpicker{width: 100%!important;}
+			.buy-bike{width: 100%!important;margin-top: 5px!important;}
+			.bikes{padding: 0!important;}
+			.popular img{padding:10px 0!important; margin-top: 10px!important;}
+			.surname, .name, .mail, .message, .send{width: 100%!important;}
+		}
+

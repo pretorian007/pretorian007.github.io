@@ -1,0 +1,345 @@
+
+@media screen and (max-width: 320px){
+.messaging-content h2 {font-size: 30px !important;
+}
+
+}
+
+@media screen and (max-width: 320px){
+.messaging-content {padding:0px !important;}
+h1{font-size: 50px!important; text-align: center!important}
+h2{font-size: 40px!important; text-align: center!important; }
+h4{text-align: center!important}
+.subscribe-i{width: 100% !important}
+.subscribe-b{width: 100%;margin: 0!important}
+.top-header-text{margin: 0!important}
+.phone-img {padding-top:70px!important;}
+.main-contacts-content {padding-top:60px!important;}
+.messaging-img{padding: 50px 0px 0 0!important;}
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	font-family:LatoBlack;
+	src: url(../fonts/Lato-Black.ttf);
+	font-family:LatoRegular;
+	src: url(../fonts/Lato-Regular.ttf);
+	font-family:Latobold;
+	src: url(../fonts/Lato-Bold.ttf);
+	}
+@font-face{
+	font-family:Lato-Italic;
+	src: url(../fonts/Lato-Italic.ttf);
+}
+
+
+body .mainwrap{
+	overflow-x: hidden !important;
+}
+
+
+.header{
+	background: url(../img/top-bg.png) no-repeat 0 center;
+	background-size: cover;
+	width: 100%;
+}
+
+.brand  {
+	font-family: LatoBlack;
+	font-weight: bold;
+	font-size: 49px;
+	color: #fff;
+	padding: 40px 0 0 25px;
+	margin: 0;
+}
+.brand:hover{
+	text-decoration: none;
+	text-transform: none;
+	color: #fff;
+}
+.navbar {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.navbar-toggle  {
+    position: relative !important;
+    float: right !important;
+    padding: 10px 15px !important;
+    margin-top: 19px !important;
+    margin-right: 20px !important;
+    margin-bottom: 8px !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 1px solid white !important;
+    border-radius: 4px !important ;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff!important;
+}
+.navbar-nav {
+    border-color: #fff7f7!important;
+    font-family: LatoRegular!important;
+    font-size: 20pt!important;
+    text-transform: uppercase!important;
+    
+}
+.navbar-nav a{
+	color: #fff!important;
+	padding-right: 64px !important;
+	background: transparent!important; 
+}
+.navbar-nav a:hover{
+	color: #fff!important;
+	text-decoration: line-through!important;
+}
+.navbar-nav > li > a {
+    padding-top: 25px!important;
+    padding-bottom: 15px!important;
+}
+.top-header-text{
+	margin-top: 230px;
+
+}
+
+.top-block h1{
+	font-family:Latobold;
+	color: #fff;
+	font-size: 72px;
+	letter-spacing: 1px;
+}
+.top-block h4{
+	color: #fff;
+	font-family: LatoBlack;
+	font-size: 20pt;
+	letter-spacing: 0.2pt;
+	padding: 30px 0 70px 0;
+}
+
+.top-block .heyu-span{
+	color: #fff;
+	font-family:LatoRegular;
+	font-weight: bold;
+	font-size: 24pt;
+}
+.download-b{
+	color: #e01e3c;
+	background-color: #fff;
+	font-family:Latobold;
+	font-size: 18pt;
+	padding: 10px 50px;
+	border-radius: 25px;
+	border:none;
+}
+.download-b:hover{
+	color: #000;
+	background-color: #fff;
+}
+
+.phone-img{
+	width: 100%;
+    padding-top: 130px;
+}
+
+.messaging-content{
+	padding: 100px 50px 0 50px;
+}
+.messaging-img{
+	padding: 100px 40px 0 0;
+
+}
+
+.messaging-content h2{
+	font-family:Latobold;
+	font-size: 50pt;
+	color: #363636;
+
+}
+.dot{
+	color: #e1203b;
+} 
+.messaging-content p{
+	color: #808080;
+	font-family: LatoBlack;
+	border-bottom: 1px solid #e0e0e0;
+}
+.conversation, .messaging{
+	width: 100%;
+}
+
+.main-contacts-img{
+	padding: 0px;
+}
+.main-contacts-content{
+	padding-top: 100px;
+}
+
+.reviews{
+	border-top: 1px solid #e0e0e0;
+	
+	padding-bottom: 100px;
+
+}
+.reviews-content h2{
+	padding-bottom: 90px;
+}
+
+.reviews-about p{
+	color: #808080;
+	font-family:Lato-Italic;
+	line-height: 22pt;
+	padding: 5px 20px 0 20px;	
+}
+.reviews-about{
+	border: 1px solid white;
+    padding: 20px;
+    position: relative;
+}
+ 
+.reviews-about:hover{
+	 box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+  .reviews-about:hover:before, .reviews-about::after {
+    content: ''; 
+    position: absolute;
+    left: 20px; bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid transparent;
+   }
+   .reviews-about::after {
+    border-top: 10px solid white;
+    bottom: -19px; 
+
+   }
+
+.reviews-about a{
+	font-family:Latobold;
+	color: #df193e;
+	text-decoration: none;
+	
+	padding: 5px 20px 10px 20px;
+}
+.people{
+	padding-right:10px;
+
+}
+.reviews h4{
+	font-family:LatoRegular;
+	color: #363636;
+	margin-left: 75px;
+	
+}
+
+.reviews-dude{
+padding-top: 40px;}
+
+
+/*Features*/
+.features{
+	   
+	   padding-bottom: 100px;
+}
+.features h2{
+	text-align: center;
+	font-family:Latobold;
+	font-size: 50pt;
+	color: #363636;
+}
+.features p{
+	text-align: center;
+	font-family:LatoRegular;
+	font-size: 18px;
+	color: #808080;
+	padding: 10px 0px;
+}
+
+
+.subscribe{
+	text-align: center;
+
+}
+.subscribe-b{
+	padding: 12px 51px;
+	background: linear-gradient(to top, #d90647, #eb3f2d);
+	border:none;
+	border-radius: 24px;
+	margin-left: -30px;
+	color: #fff;
+	box-shadow: -1px 1px 5px #d74370;
+
+}
+.subscribe-b:hover{
+	background: linear-gradient(to top, #eb3f2d, #d90647);
+}
+
+.subscribe-i{
+	background: #f8f8f8;
+	color: #808080;
+	padding: 10px 10px;
+	width: 50%;
+	font-family: Myriad Pro;
+	font-size: 18px;
+	border: none;
+	border-radius: 24px;
+
+}
+
+.download{
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+	padding-bottom: 100px;
+}
+.your-app{
+
+	padding: 50px 0;
+}
+
+.download h2{
+	text-align: center;
+	font-family:Latobold;
+	font-size: 50pt;
+	color: #363636;
+}
+.download p{
+text-align: center;
+	font-family:LatoRegular;
+	font-size: 18px;
+	color: #808080;
+	padding: 10px 0px 30px 0;
+}
+.appst{
+	padding: 20px 0 20px 0;
+}
+.footer-nav li{
+	display: inline-block;
+	line-height: 70px;
+	margin-left: 60px;
+}
+.footer-nav li a{
+	text-transform: uppercase;
+	color: #363636;
+	font-family:LatoRegular;
+	font-size: 18px;
+	text-decoration: none;
+}
+.footer-nav li a:hover{
+	color: #808080;
+}
+/*select{
+	padding: 5px 0;
+	line-height: 70px;
+	margin-top: 20px;
+	background: #f8f8f8;
+	margin-top: 20px!important;
+	border: none;
+
+
+}
+option{
+	color: #363636;
+	font-family:LatoRegular;
+	font-size: 18px;
+}*/

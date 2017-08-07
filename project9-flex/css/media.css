@@ -1,0 +1,96 @@
+@media(max-width: 1199px){
+  html{
+    font-size: 8px;
+  }
+
+}
+@media(max-width: 991px){
+  html{
+    font-size: 7px;
+  }
+  .main{
+  height: 50vh;
+  }
+    .visible-lg{
+    display: none;
+  } 
+  .m-nemu-link{
+    display: block;
+  }
+  .get-started-btn{
+    margin: 0px;
+  }
+  .price-tags{
+    flex-direction: column;
+  }
+  .price-tag{
+       width: 90%;
+       margin: 2rem auto;
+  }
+  .footer-menu{
+    display: none;
+  }
+  .footer{
+    justify-content: center;
+  }
+  .legal{
+  flex-direction: column;
+  }
+  .social-links a{
+    font-size:3rem;
+    padding-bottom: 5rem;
+  }
+  .social-links{
+    padding-top: 3rem;
+  }
+  .table{
+    padding: .5rem;
+  }
+}
+@media(max-width: 320px){
+  html{
+    font-size: 10px;
+  }
+  .header{
+    flex-grow: 1;
+    justify-content: center;
+    padding-top: 5rem;
+    margin: 0;
+  }
+  .table{
+    padding: .5rem;
+    margin-top: 10px;
+  }
+  .table h2{
+    font-size: 3rem;
+  }
+  .table p{
+    width: 100%;
+  } 
+  .call-to-action{
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .legal{
+    text-align: center;
+  }
+  .m-nemu-link{
+    right: 3rem;
+    top: 3rem;
+
+  }
+  .close-menu{
+    right: 3rem;
+    top: 3rem;
+  }
+  .main-text h1{
+    font-size: 5rem;
+  }
+  .call-to-action h4{
+    font-size: 4rem;
+  }
+  .price-tag{
+    width: 100%;
+  }
+}

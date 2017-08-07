@@ -1,0 +1,41 @@
+button{
+	outline:none!important;
+}
+
+
+#block{
+	width: 250px;
+	height: 250px;
+	background: #7daf1f;
+	margin: 30px; 
+
+	
+}
+#generated{
+	width: 400px;
+	height: 150px;
+	margin: 30px;
+	resize: none;
+}
+
+.test{
+	display: table-caption;
+	min-width: 220px;
+}
+
+#generate{
+
+	padding: 20px 40px;
+}
+#clearArea{
+	padding: 20px 40px;
+}
+.minwrap{
+	display: flex;
+}
+.bb{
+	position: relative;
+}
+.full_rad_bold{
+	font-weight: bold;
+}
