@@ -3,14 +3,6 @@
   .container{
     width: 100%;
   }
-  .col-4{
-    width: 100%;
-    margin: 0!important;
-    margin-bottom: 30px;
-    padding: 0 15px;
-    text-align: center;
-  }
-
 }
 
 @media(max-width: 991px){
@@ -71,7 +63,7 @@
 
 
 @media (max-width: 390px){
-  .portfolio-item img{
+  .item img{
     width: 100%;
     height: auto;
   }
@@ -79,17 +71,17 @@
 
 
 @media (max-width: 320px){
-  .header-title h1{
+  .header  h1{
     font-size: 4.6rem;
   }
-  .header-description p{
+  .header  p{
     font-size: 2.8rem;
     margin-top: 15px;
   }
   .header-arrow{
     bottom: 30px;
   }
-  .portfolio-item-text p{
+  .portfolio p{
     margin: 0;
   }
   .footer h4{
@@ -104,10 +96,17 @@
   .btn-contact{
     margin-bottom: 30px;
   }
+  .footer-info{
+    text-align: center;
+  }
 }
 
 
-
+@media (max-width: 674px){
+ .footer-info{
+    text-align: center;
+  }
+}
 
 
 
