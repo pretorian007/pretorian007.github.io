@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 7 ]><html class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="shortcut icon" type="image" href="img">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
 </head>
+
 <body>
 	<div class="wrapper">
 
 		<header class="header">
-			<!-- mobile -->
-			<ul class="m-menu "> 
-				<div class="close-menu">
-					<div class="close-menu-line">							
-					</div>
-				</div>     
-				<li><a href="#" class="menu-link">Home</a></li>
-				<li><a href="#" class="menu-link">Резюме</a></li>
-				<li><a href="#" class="menu-link">Портфолиоs</a></li>
-				<li><a href="#" class="menu-link">Skills</a></li>
-				<li><a href="#footer" class="menu-link">Контакты</a></li>
-			</li>
+		<!-- mobile -->
+		<div class="m-nemu-link">
+			<div class="m-nemu-link-line"></div>
+		</div>
+
+
+		<ul class="m-menu "> 	
+		<div class="close-menu">
+			<div class="close-menu-line"></div>
+		</div>   
+			<li><a class="menu-link oops" href="#">Резюме</a></li>
+			<li><a class="menu-link" href="#portfolio">Портфолио</a></li>
+			<li><a class="menu-link" href="#skills">Skills</a></li>
+			<li><a class="menu-link" href="#footer">Контакты</a></li>	
 		</ul>
+
+
+
+
+
+
 		<!-- mobile end -->
 		<nav>
 			<div class="menu">
 				<ul>
 					<li><a class="oops" href="#">Резюме</a></li>
 					<li><a href="#portfolio">Портфолио</a></li>
-					<li><a class="oops" href="#">Skills</a></li>
+					<li><a class="" href="#skills">Skills</a></li>
 					<li><a href="#footer">Контакты</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div class="m-nemu-link oops">
-			<div class="m-nemu-link-line">
-			</div>
-		</div >
 		<div class="header-main">
 			<h1>Александр Ропан</h1>
-			<p>Верстка сайтов на HTML и CSS <br> HTML5 CSS3 JS jQuery</p>
+			<p>Верстка сайтов на HTML и CSS <br> HTML5 CSS3 JS </p>
 			<div  class="header-arrow">
 				<a href="#portfolio"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</header>
 
-
+<!-- portfolio -->
 	<main id="portfolio" class="portfolio">
 		<div class="container">			
 			<h2>Portfolio</h2>
@@ -95,10 +107,39 @@
 				</div>
 
 			</div>			
-
-		</div> <!-- container -->
-	</main> <!-- portfolio -->
-
+		</div>
+	</main> 
+<!-- 	skills -->
+<section id="skills" class="skills">
+	<div class="container">
+		<div class="content">
+			<div class="left">
+			<h2>Skills</h2>
+			<div class="skills-Content html-Content"><span>HTML HTML5</span> <span>70%</span></div>
+			<div class="skills-Content css-Content"><span>CSS CSS3</span> <span>71%</span></div>
+			<div class="skills-Content js-Content"><span>JavaScript</span> <span>43%</span></div>
+			<div class="skills-Content less-Content"><span>Less</span> <span>15%</span></div>
+			<div class="skills-Content bootstrap-Content"><span>Bootstrap</span> <span>55%</span></div>
+			<div class="skills-Content git-Content"><span>Git</span> <span>60%</span></div>
+			<div class="skills-Content gulp-Content"><span>Gulp</span> <span>45%</span></div>
+<!-- 			
+			<div class="skills-Content jquery-Content"><span>jQuery</span> <span>70%</span></div> -->
+		</div>
+		<div class="right">
+		<div class="about">
+			<h3>About</h3>
+			<div class="photo">
+				<img src="img/about.jpg" alt="">
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque iusto minus sequi natus nesciunt, rerum tenetur corrupti, autem, officiis fugiat expedita laudantium ea aspernatur laborum consectetur accusantium quod. Illum!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque iusto minus sequi natus nesciunt, rerum tenetur corrupti, autem, officiis fugiat expedita laudantium ea aspernatur laborum consectetur accusantium quod. Illum!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex atque iusto minus sequi natus nesciunt, rerum tenetur corrupti, autem, officiis fugiat expedita laudantium ea aspernatur laborum consectetur accusantium quod. Illum!</p>
+		</div>
+		</div>
+		</div>
+	</div>
+</section>
+<!-- footer -->
 	<footer id="footer" class="footer">
 		<div class="container">			
 			<div class="footer-info">

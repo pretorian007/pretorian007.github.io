@@ -4,7 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task('min', () =>
     gulp.src('css/style.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('dist'))

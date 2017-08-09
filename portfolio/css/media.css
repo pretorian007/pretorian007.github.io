@@ -42,20 +42,42 @@
   .table{
     padding: .5rem;
   }
+
+}
+@media(max-width: 880px){
+  .left{
+    flex-basis: 100%;
+    padding: 0;
+  }
+  .right{
+    flex-basis: 100%;
+    padding: 0;
+  }
+  .right .photo img{
+ 
+
+  }
+}
+@media(max-width: 768px){
+    nav{
+    display: none;
+  }
+    .m-nemu-link{
+    display: block;
+  }
+  
+  .header-main{
+    flex-grow: 0;
+  }
 }
 
 
 
+@media (max-width: 500px){
 
-@media (max-width: 440px){
-  nav{
-    display: none;
-  }
-  .header-main{
-    flex-grow: 0;
-  }
-  .m-nemu-link{
-    display: block;
+
+  .skills{
+    padding: 100px 5px;
   }
 }
 
