@@ -29,13 +29,9 @@ window.onload = function(){
 	// seeMore .onclick = function () {
 	// 	more.classList.toggle("more-active");
 	// }
-
+// var oopps = document.querySelector(".oops")
+// oopps.onclick = function(){
+// 		console.log ("Oops! Эта страничка еще в разработке");
+// 	};
 }
 
-
-
-$(document).ready(function(){
-
-
-
-});
