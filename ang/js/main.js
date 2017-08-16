@@ -92,17 +92,27 @@ var itemGrid = document.querySelector(".items-grid");
 var item = document.querySelector(".item")
 
 sortCol.onclick = function(){
-    var item = document.querySelector(".item")
-        itemGrid.className = "items-list";
-        for(i=0;i<item.length; i++){
-            item[i].style.flexDirection = "row";
-        }
+var btnBuy = document.querySelector(".btn-buy"),
+    item = document.querySelector(".item"),
+    nav = document.querySelector(".nav "),
+    itemInfo = document.querySelector(".item-info"),
+    liTabs = document.querySelectorAll(" li");
+    
+    liTabs.forEach(function (el) {
+    el.style.marginRight = "3px"
+    })
+
+        itemGrid.className = "items-list";       
+        item.style.flexDirection = "row";
+        btnBuy.style.margin = "auto 0 10px 0"
+        nav.style.display = "flex"
+        itemInfo.style.marginLeft = "10px"
     
 }
  sortRow.onclick = function(){
     var item = document.querySelector(".item")
         itemGrid.className = "items-grid"
-        // item.style.flexDirection = "column";
+        item.style.flexDirection = "column";
 
     
 };
