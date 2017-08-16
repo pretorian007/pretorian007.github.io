@@ -82,7 +82,9 @@ app.controller('GalleryController', function () {
 
 
 
-
+(
+function () {
+    // body...
 
 var sortCol = document.querySelector(".sort-col");
 var sortRow = document.querySelector(".sort-row");
@@ -92,8 +94,9 @@ var item = document.querySelector(".item")
 sortCol.onclick = function(){
     var item = document.querySelector(".item")
         itemGrid.className = "items-list";
-        // item.style.flexDirection = "row";
-
+        for(i=0;i<item.length; i++){
+            item[i].style.flexDirection = "row";
+        }
     
 }
  sortRow.onclick = function(){
@@ -104,3 +107,4 @@ sortCol.onclick = function(){
     
 };
 
+})()
