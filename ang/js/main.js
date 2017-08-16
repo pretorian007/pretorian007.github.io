@@ -96,7 +96,8 @@ var btnBuy = document.querySelector(".btn-buy"),
     item = document.querySelector(".item"),
     nav = document.querySelector(".nav "),
     itemInfo = document.querySelector(".item-info"),
-    liTabs = document.querySelectorAll(" li");
+    liTabs = document.querySelectorAll(" li")
+
     
     liTabs.forEach(function (el) {
     el.style.marginRight = "3px"
