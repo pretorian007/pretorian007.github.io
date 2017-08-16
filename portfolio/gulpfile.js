@@ -3,7 +3,18 @@ var autoprefixer = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var imagemin = require('gulp-imagemin');
 
+
 gulp.task('go', ['minimg', 'autocss']);
+
+gulp.task('watch', function() {
+	
+        gulp.watch('css/*.css', ['autocss']); 
+
+        
+    });
+
+
+
 
 gulp.task('live', function() {
   gulp.src('')
@@ -32,5 +43,4 @@ gulp.task('autocss', () =>
         }))
         .pipe(gulp.dest('dist/css'))
 );
-
 

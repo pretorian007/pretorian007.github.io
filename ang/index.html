@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="js/chance.js"></script>
+
+
+
+</head>
+<body>
+    <section class="products" >
+        <div class="container"  ng-class="{'app-loaded': true}"> 
+            <div  class="sor">
+                <span  >Sort by:</span>
+                <span class="sort-max" ng-click=""  ><i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+                </span>
+                <span class="sort-min" ><i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                </span>
+                <span class="sort-col" >
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                </span>
+                <span class="sort-row" >
+                    <i class="fa fa-th" aria-hidden="true"></i>
+
+                </span>
+
+            </div>
+            <div class="items-grid" ng-controller="StoreController as store  ">
+              
+
+            <div class="item" ng-repeat="product in store.products | orderBy:'-price' ">
+
+                  
+                   <div  class="item-info">
+                        <p  class="item-title" >{{ product.name }}</p> 
+                    <p>{{1502883977639 | date:"dd/MM/yyyy  hh:mm"}}</p>
+                    <p class="price">{{product.price }}$</p>
+                   </div>
+
+
+
+                    <div class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length ">
+                <div class="img-wrap">
+                    <img ng-src="{{ product.images[gallery.current] }}" />
+                </div>
+                <ul class="img-thumbnails">
+                    <li class="small-image" ng-repeat="image in product.images track by $index ">
+                        <img  ng-src="{{ image }}" ng-click="gallery.setCurrent($index)" />
+                    </li>
+                </ul>
+            </div>
+
+
+<!--                     <div class="description">{{ product.description }}</div> -->
+                    <button class="btn-buy" >Buy</button>
+
+                    <div ng-controller="PanelController as panel">
+                        
+                    <ul class="nav nav-pills" >
+                        <li ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" >
+                          Description 
+                        </li>
+                         <li ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" >
+                           Specification 
+                        </li>
+                         <li ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" >Revievs  
+                        </li>
+                    </ul>
+                    <div class="panel" ng-show="panel.isSelected(1)">
+                            <h4>Description </h4>
+                            <blockquote>{{product.description}}</blockquote>               
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(2)">
+                            <h4>Spetification </h4>
+                            <blockquote>{{product.description}}</blockquote>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(3)">
+                            <h4>Revievs </h4>
+                           <blockquote>{{product.description}}</blockquote> 
+                    </div>
+                      {{ tab }}
+
+
+
+                    </div>
+                   
+            </div>
+
+
+              
+
+            </div>
+        </div>  
+    <script src="js/main.js"></script>
+    </section>
+</body>
+</html>
