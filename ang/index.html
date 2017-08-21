@@ -109,7 +109,7 @@
                 <div class="revievs" ng-show="panel.isSelected(3)">
                     <h4>Revievs </h4>
                        <blockquote ng-repeat="review in product.reviews">
-                            <b>{{ review.stars }} Stars:</b>
+                            <b>{{ review.stars }} <i class="fa fa-star"></i></b>
                             {{ review.body }}
                             <div>
                                 <i>– {{ review.author }}</i>
@@ -128,8 +128,9 @@
                                 <div><i>– {{ reviewCtrl.review.author }}</i></div>
                             </blockquote> -->
                             
+
                             <div class="form-group">
-                                <select class="form-control" ng-model="reviewCtrl.review.stars" ng-options="stars for stars in [5,4,3,2,1]" required>
+                                <select class="form-control" ng-model="reviewCtrl.review.stars" ng-options="(stars+ ' ★ ' ) for stars in [5,4,3,2,1]" required>
                                     <option value="">Rate the product</option>
                                 </select>
                             </div>
