@@ -252,7 +252,7 @@ z-index: 3;
 .price-tags{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 
 }
 
@@ -267,6 +267,7 @@ z-index: 3;
 	text-align: center;
 	width: 35rem;
 	transition: .5s;
+	margin-left: 2rem;
 }
 
 

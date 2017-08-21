@@ -155,3 +155,25 @@ ul>li:hover{
     padding: 0;
     opacity: .7;
 }
+
+
+
+
+
+
+.field {
+    clear:both; 
+    text-align:right; 
+    line-height:25px;
+
+}
+.label-spec{
+     font-weight: 900;
+   font-size: 1.2rem;  
+}
+label {
+    float:left; padding-right:10px;
+}
+.spec-form {
+    float:left
+}

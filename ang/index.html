@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900" rel="stylesheet"> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script src="js/chance.js"></script>
+    <script src="js/chance.js"></script>
 
 
 
@@ -16,92 +16,120 @@
 <body>
     <section class="products" >
         <div class="container"  ng-class="{'app-loaded': true}"> 
-            <div  class="sor">
+            <p>Sort Type: {{ sortType }}</p>
+            <div  class="sor" ng-controller="SortController">
                 <span  >Sort by:</span>
-                <span class="sort-max" ng-click=""  ><i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+
+                <span class="sort-max"  ><i ng-click="products|orderBy:'-price'" class="fa fa-sort-amount-desc" ></i>
                 </span>
-                <span class="sort-min" ><i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+
+                <span class="sort-min" ><i class="fa fa-sort-amount-asc" ></i>
                 </span>
+
                 <span class="sort-col" >
-                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <i class="fa fa-list"></i>
                 </span>
+
                 <span class="sort-row" >
-                    <i class="fa fa-th" aria-hidden="true"></i>
-
+                    <i class="fa fa-th" ></i>
                 </span>
-
             </div>
+
+
+
             <div class="items-grid" ng-controller="StoreController as store  ">
               
 
-            <div class="item" ng-repeat="product in store.products | orderBy:'-price' ">
+                <div class="item" ng-repeat="product in store.products ">
 
                   
-                   <div  class="item-info">
-                        <p  class="item-title" >{{ product.name }}</p> 
+                 <div  class="item-info">
+                    <p  class="item-title" >{{ product.name }}</p> 
                     <!-- <p>{{1502883977639 | date:"dd/MM/yyyy  hh:mm"}}</p> -->
                     <p class="price">{{product.price }}$</p>
-                   </div>
-
-
-
-                    <div class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length ">
-                <div class="img-wrap">
-                    <img ng-src="{{ product.images[gallery.current] }}" />
                 </div>
-                <ul class="img-thumbnails">
-                    <li class="small-image" ng-repeat="image in product.images track by $index ">
-                        <img  ng-src="{{ image }}" ng-click="gallery.setCurrent($index)" />
-                    </li>
-                </ul>
-            </div>
 
 
 
-
-
-
-<!--                     <div class="description">{{ product.description }}</div> -->
-                    <button class="btn-buy" >Buy</button>
-
-                    <div ng-controller="PanelController as panel">
-                        
-                    <ul class="nav nav-pills" >
-                        <li ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" >
-                          Description 
-                        </li>
-                         <li ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" >
-                           Specification 
-                        </li>
-                         <li ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" >Revievs  
+                <div class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length ">
+                    <div class="img-wrap">
+                        <img ng-src="{{ product.images[gallery.current] }}" />
+                    </div>
+                    <ul class="img-thumbnails">
+                        <li class="small-image" ng-repeat="image in product.images track by $index ">
+                            <img  ng-src="{{ image }}" ng-click="gallery.setCurrent($index)" />
                         </li>
                     </ul>
-                    <div class="panel" ng-show="panel.isSelected(1)">
-                            <h4>Description </h4>
-                            <blockquote>{{product.description}}</blockquote>               
-                    </div>
-                    <div class="panel" ng-show="panel.isSelected(2)">
-                            <h4>Spetification </h4>
-                            <blockquote>{{product.description}}</blockquote>
-                    </div>
-                    <div class="panel" ng-show="panel.isSelected(3)">
-                            <h4>Revievs </h4>
-                           <blockquote>{{product.description}}</blockquote> 
-                    </div>
-                      {{ tab }}
+                </div>
 
 
 
-                    </div>
-                   
+
+
+
+                <!--                     <div class="description">{{ product.description }}</div> -->
+                <button class="btn-buy" >Buy</button>
+
+                <div ng-controller="PanelController as panel">
+                    
+                    <ul class="nav" >
+                        <li ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" >
+                          Description 
+                      </li>
+                      <li ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" >
+                         Specification 
+                     </li>
+                     <li ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" >Revievs  
+                     </li>
+                 </ul>
+                 <div class="panel" ng-show="panel.isSelected(1)">
+                    <h4>Description </h4>
+                    <blockquote>{{product.description}}</blockquote>               
+                </div>
+                <div class="panel" ng-show="panel.isSelected(2)">
+                    <h4>Spetification </h4>
+                    <form action="" class="spec-form">
+                        <div class="field">
+                         <label class="label-spec" for="weight">Weight:</label>
+                             <input value="{{product.weight}}" type="text" id="weight" disabled />
+                        </div>
+                        <div class="field">
+                         <label class="label-spec" for="material">Material:</label>
+                             <input value="{{product.material}}" type="text" id="material" disabled />
+                        </div>
+                        <div class="field">
+                           <label class="label-spec" ng-model="yes">Shooting mode:</label>
+                           <input type="radio" name="spec" value="Automatic" ng-model="spec"  />Automatic 
+                           <input type="radio" name="spec" value="Semiautomatic" ng-model="spec"/>Semiautomatic <br>                                
+                        </div>
+<!--                          <div class="field">
+                           <select ng-model="number"></select>   
+                           <option value="">select a value</option>
+                           <option ng-repeat="numbers in store.numbers" value="number">{{number}}</option>               
+                        </div>
+ -->
+                    </form>
+                    <!-- <blockquote>{{product.description}}</blockquote> -->
+                </div>
+                <div class="panel" ng-show="panel.isSelected(3)">
+                    <h4>Revievs </h4>
+
+                    <blockquote>{{product.description}}</blockquote> 
+                </div>
+             
+
+
+
             </div>
+            
+        </div>
 
 
-              
+        
 
-            </div>
-        </div>  
-    <script src="js/main.js"></script>
-    </section>
+    </div>
+</div>  
+<script src="js/main.js"></script>
+</section>
 </body>
 </html>

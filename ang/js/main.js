@@ -1,5 +1,4 @@
-
-
+var app = angular.module('app', []);
 
 var random = {
     name:   function(){
@@ -9,6 +8,13 @@ var random = {
              "SCAR",
              "Some"   
             ]);
+    },
+    material: function(){
+        return chance.pickone([
+              "Steel",
+              "Silumin",
+              "Plastic"  
+            ])
     },
     price:  function () {
         return chance.floating({
@@ -27,25 +33,28 @@ var random = {
     },
     boolean: function(){
         return chance.bool();
+    },
+    weight: function(){
+        return chance.floating({
+            min:   2,
+            max:   10,
+            fixed: chance.natural({ max: 2 })
+        });
     }
 
 };//end var rand
 
 
 
-
-
-
-
-var app = angular.module('app', []);
-
 app.controller('StoreController', function ($scope, $timeout) {
     this.products = (new Array(6)).fill()
         .map(v=>{
             return{
                 name:           random.name(),
+                material:       random.material(),
                 price:          random.price(),
-                description:    random.sentence(), 
+                description:    random.sentence(),
+                weight:         random.weight(), 
                 canPurchase:    random.boolean(),
                 image:          random.image(),
                 soldOut:        random.boolean(),
@@ -53,6 +62,7 @@ app.controller('StoreController', function ($scope, $timeout) {
             }
 
         });//map
+
 });
 
 
@@ -82,40 +92,65 @@ app.controller('GalleryController', function () {
 
 
 
-(
-function () {
-    // body...
 
-var sortCol = document.querySelector(".sort-col");
-var sortRow = document.querySelector(".sort-row");
-var itemGrid = document.querySelector(".items-grid");
-var item = document.querySelector(".item")
+app.controller('SortController', function($scope) {
+  $scope.sortMax    = 'max'; // значение сортировки по умолчанию
+  $scope.sortMin  = "min";  // обратная сортривка
 
-sortCol.onclick = function(){
-var btnBuy = document.querySelector(".btn-buy"),
-    item = document.querySelector(".item"),
-    nav = document.querySelector(".nav "),
-    itemInfo = document.querySelector(".item-info"),
-    liTabs = document.querySelectorAll(" li")
+
+  
+});
+
+
+app.controller('ReviewController', function () {
+   this.review = {};
+
+   this.addReview = function(product){
+       product.reviews.push(this.review);
+       this.review = {};
+   };
+});
+
+
+
+
+
+
+
+// (
+// function () {
+//     // body...
+
+// var sortCol = document.querySelector(".sort-col");
+// var sortRow = document.querySelector(".sort-row");
+// var itemGrid = document.querySelector(".items-grid");
+// var item = document.querySelector(".item")
+
+// sortCol.onclick = function(){
+// var btnBuy = document.querySelector(".btn-buy"),
+//     item = document.querySelector(".item"),
+//     nav = document.querySelector(".nav "),
+//     itemInfo = document.querySelector(".item-info"),
+//     liTabs = document.querySelectorAll(" li")
 
     
-    liTabs.forEach(function (el) {
-    el.style.marginRight = "3px"
-    })
+//     liTabs.forEach(function (el) {
+//     el.style.marginRight = "3px"
+//     })
 
-        itemGrid.className = "items-list";       
-        item.style.flexDirection = "row";
-        btnBuy.style.margin = "auto 0 10px 0"
-        nav.style.display = "flex"
-        itemInfo.style.marginLeft = "10px"
+//         itemGrid.className = "items-list";       
+//         item.style.flexDirection = "row";
+//         btnBuy.style.margin = "auto 0 10px 0"
+//         nav.style.display = "flex"
+//         itemInfo.style.marginLeft = "10px"
     
-}
- sortRow.onclick = function(){
-    var item = document.querySelector(".item")
-        itemGrid.className = "items-grid"
-        item.style.flexDirection = "column";
+// }
+//  sortRow.onclick = function(){
+//     var item = document.querySelector(".item")
+//         itemGrid.className = "items-grid"
+//         item.style.flexDirection = "column";
 
     
-};
+// };
 
-})()
+// })()
