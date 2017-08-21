@@ -16,14 +16,14 @@
 <body>
     <section class="products"  >
         <div class="container"  ng-class="{'app-loaded': true}"> 
-            <p>Sort Type: {{ sortType }}</p>
+            <p>Sort Type: {{ name }}</p>
             <div  class="sor">
                 <span  >Sort by:</span>
-
+                
                 <span class="sort-max" ng-click="orderProperty = '-price'"   ><i class="fa fa-sort-amount-desc" ></i>
                 </span>
 
-                <span class="sort-min" ng-click="orderProperty = 'price'" ><i class="fa fa-sort-amount-asc" ></i>
+                <span class="sort-min" ng-model="max" ng-click="orderProperty = 'price'" ><i class="fa fa-sort-amount-asc" ></i>
                 </span>
 
                 <span class="sort-col" >
@@ -106,10 +106,63 @@
                     </form>
                     <!-- <blockquote>{{product.description}}</blockquote> -->
                 </div>
-                <div class="panel" ng-show="panel.isSelected(3)">
+                <div class="revievs" ng-show="panel.isSelected(3)">
                     <h4>Revievs </h4>
+                       <blockquote ng-repeat="review in product.reviews">
+                            <b>{{ review.stars }} Stars:</b>
+                            {{ review.body }}
+                            <div>
+                                <i>– {{ review.author }}</i>
+                                <span>{{ review.date| date:"(dd.MM.yyyy)"}}</span>
+                            </div>
+                            <hr>
+                            
+                        </blockquote>
 
-                    <blockquote>{{product.description}}</blockquote> 
+                        <form  class="revievs-form" name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                              ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+<!-- 
+                            <blockquote>
+                                <b>{{ reviewCtrl.review.stars }} Stars:</b>
+                                {{ reviewCtrl.review.body }}
+                                <div><i>– {{ reviewCtrl.review.author }}</i></div>
+                            </blockquote> -->
+                            
+                            <div class="form-group">
+                                <select class="form-control" ng-model="reviewCtrl.review.stars" ng-options="stars for stars in [5,4,3,2,1]" required>
+                                    <option value="">Rate the product</option>
+                                </select>
+                            </div>
+                            
+
+                            <div class="form-control">
+                                <textarea
+                                        rows="5" cols="35"
+                                        class="review-body"
+                                        ng-model="reviewCtrl.review.body"
+                                        placeholder="Write a short review of the product..."
+                                        required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input
+                                        class="form-control"
+                                        ng-model="reviewCtrl.review.author"
+                                        type="email"
+                                        placeholder="email@example.org"
+                                        required
+                                />
+                            </fieldset>
+
+                            <div class="form-group">
+                                <input class="btn btn-primary" type="submit" value="Submit" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
                 </div>
              
 

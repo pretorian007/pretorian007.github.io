@@ -25,6 +25,7 @@ img{
 }
 .products{
     text-align: center;
+    background: #f8f6f6;
 
 }
 .container{
@@ -66,12 +67,16 @@ img{
 }
 
 .item{
+    background: #fff;
     flex-basis: 340px;
     border: 1px solid lightgrey;
     margin: 10px;
     box-shadow: 0px 0px 20px 1px rgb( 204, 204, 223 );
     text-align: center;
-
+    transition: .5s;
+}
+.item:hover{
+    box-shadow: 0px 0px 9px 4px rgb( 204, 204, 223 );
 }
 
 .item-title{
@@ -115,6 +120,7 @@ ul{
     margin:  0 0 auto 0;
     margin-bottom: 10px;
     flex-grow: 1;
+
 }
 ul>li{
 
@@ -123,6 +129,7 @@ ul>li{
     padding: 10px 20px;
         color: #000;
     font-size: 1.2rem;
+    transition: 0.5s;
 
 }
 ul>li a{
@@ -175,11 +182,37 @@ ul>li:hover{
 }
 .label-spec{
      font-weight: 900;
-   font-size: 1.2rem;  
+        font-size: 1.2rem;  
 }
 label {
     float:left; padding-right:10px;
 }
 .spec-form {
     float:left
+}
+
+.revievs{
+    font-size: 1.2rem;
+    display: flex;
+justify-content: space-around;
+flex-direction: column;
+}
+.revievs-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form-control{
+       width: 100%;
+    resize: none;
+     margin-bottom: 10px;
+}
+.form-group{
+
+    margin-bottom: 10px;
+}
+.review-body{
+    width: 90%;
+    resize: none;
 }

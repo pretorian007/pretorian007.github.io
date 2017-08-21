@@ -5,7 +5,7 @@ var random = {
         return chance.pickone([
              "Ak-47",
              "Aug",
-             "SCAR",
+             "L85A1",
              "Some"   
             ]);
     },
@@ -40,6 +40,12 @@ var random = {
             max:   10,
             fixed: chance.natural({ max: 2 })
         });
+    },
+        stars: function () {
+        return chance.natural({ min: 1, max: 5 });
+    },
+    email: function () {
+        return chance.email();
     }
 
 };//end var rand
@@ -58,7 +64,12 @@ app.controller('StoreController', function ($scope, $timeout) {
                 canPurchase:    random.boolean(),
                 image:          random.image(),
                 soldOut:        random.boolean(),
-                images:         [random.image(), random.image(), random.image()]
+                images:         [random.image(), random.image(), random.image()],
+                reviews:     [{
+                   stars:  random.stars(),
+                   body:   random.sentence(),
+                   author: random.email()
+               }]
             }
 
         });//map
@@ -102,17 +113,16 @@ app.controller('SortController', function($scope) {
 });
 
 
-app.controller('ReviewController', function () {
-   this.review = {};
 
-   this.addReview = function(product){
-       product.reviews.push(this.review);
+    app.controller('ReviewController', function () {
        this.review = {};
-   };
-});
 
-
-
+       this.addReview = function(product){
+           this.review.date = new Date()
+           product.reviews.push(this.review);
+           this.review = {};
+       };
+    });
 
 
 
