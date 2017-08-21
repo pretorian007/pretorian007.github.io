@@ -117,40 +117,42 @@ app.controller('ReviewController', function () {
 
 
 
-// (
-// function () {
-//     // body...
+(
+function () {
+    // body...
 
-// var sortCol = document.querySelector(".sort-col");
-// var sortRow = document.querySelector(".sort-row");
-// var itemGrid = document.querySelector(".items-grid");
-// var item = document.querySelector(".item")
+var sortCol = document.querySelector(".sort-col");
+var sortRow = document.querySelector(".sort-row");
+var itemGrid = document.querySelector(".items-grid");
+var item = document.querySelector(".item")
 
-// sortCol.onclick = function(){
-// var btnBuy = document.querySelector(".btn-buy"),
-//     item = document.querySelector(".item"),
-//     nav = document.querySelector(".nav "),
-//     itemInfo = document.querySelector(".item-info"),
-//     liTabs = document.querySelectorAll(" li")
-
-    
-//     liTabs.forEach(function (el) {
-//     el.style.marginRight = "3px"
-//     })
-
-//         itemGrid.className = "items-list";       
-//         item.style.flexDirection = "row";
-//         btnBuy.style.margin = "auto 0 10px 0"
-//         nav.style.display = "flex"
-//         itemInfo.style.marginLeft = "10px"
-    
-// }
-//  sortRow.onclick = function(){
-//     var item = document.querySelector(".item")
-//         itemGrid.className = "items-grid"
-//         item.style.flexDirection = "column";
+sortCol.onclick = function(){
+var btnBuy = document.querySelector(".btn-buy"),
+    item = document.querySelector(".item"),
+    nav = document.querySelector(".nav "),
+    itemInfo = document.querySelector(".item-info"),
+    liTabs = document.querySelectorAll(" li")
 
     
-// };
+    liTabs.forEach(function (el) {
+    el.style.marginRight = "3px"
+    })
 
-// })()
+        itemGrid.className = "items-list";
+        item.style.display = "inline-flex" 
+        item.style.flexDirection ="row"      
+        // item.style.flexDirection = "row";
+        // btnBuy.style.margin = "auto 0 10px 0"
+        // nav.style.display = "flex"
+        // itemInfo.style.marginLeft = "10px"
+    
+}
+ sortRow.onclick = function(){
+    var item = document.querySelector(".item")
+        itemGrid.className = "items-grid"
+        item.style.flexDirection = "column";
+
+    
+};
+
+})()

@@ -59,9 +59,10 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
-.items-list{
-    
+.item-flex{
+
 }
 
 .item{
@@ -156,8 +157,13 @@ ul>li:hover{
     opacity: .7;
 }
 
-
-
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav li{
+    margin-right: 3px;
+}
 
 
 

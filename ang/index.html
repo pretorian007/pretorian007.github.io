@@ -14,22 +14,21 @@
 
 </head>
 <body>
-    <section class="products" >
+    <section class="products"  >
         <div class="container"  ng-class="{'app-loaded': true}"> 
             <p>Sort Type: {{ sortType }}</p>
-            <div  class="sor" ng-controller="SortController">
+            <div  class="sor">
                 <span  >Sort by:</span>
 
-                <span class="sort-max"  ><i ng-click="products|orderBy:'-price'" class="fa fa-sort-amount-desc" ></i>
+                <span class="sort-max" ng-click="orderProperty = '-price'"   ><i class="fa fa-sort-amount-desc" ></i>
                 </span>
 
-                <span class="sort-min" ><i class="fa fa-sort-amount-asc" ></i>
+                <span class="sort-min" ng-click="orderProperty = 'price'" ><i class="fa fa-sort-amount-asc" ></i>
                 </span>
 
                 <span class="sort-col" >
                     <i class="fa fa-list"></i>
                 </span>
-
                 <span class="sort-row" >
                     <i class="fa fa-th" ></i>
                 </span>
@@ -37,12 +36,8 @@
 
 
 
-            <div class="items-grid" ng-controller="StoreController as store  ">
-              
-
-                <div class="item" ng-repeat="product in store.products ">
-
-                  
+            <div class="items-grid" ng-controller="StoreController as store">              
+                <div class="item" ng-repeat="product in store.products | orderBy : orderProperty">      
                  <div  class="item-info">
                     <p  class="item-title" >{{ product.name }}</p> 
                     <!-- <p>{{1502883977639 | date:"dd/MM/yyyy  hh:mm"}}</p> -->
@@ -87,7 +82,7 @@
                     <blockquote>{{product.description}}</blockquote>               
                 </div>
                 <div class="panel" ng-show="panel.isSelected(2)">
-                    <h4>Spetification </h4>
+                    <h4> Specification</h4>
                     <form action="" class="spec-form">
                         <div class="field">
                          <label class="label-spec" for="weight">Weight:</label>
