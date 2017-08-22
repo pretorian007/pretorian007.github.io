@@ -914,7 +914,7 @@ MOBILE MENU*/
 
 
 /*PRELOADER*/
-/*#p_prldr{
+#p_prldr{
 position: fixed;
 left: 0;
 top: 0;
@@ -938,6 +938,6 @@ text-align:center;
 position: absolute;
 width: 100px;
 height: 100px;
-background: url(../img/tail-spin.svg) center center no-repeat;
+background: url(../img/loading.gif) center center no-repeat;
 background-size:100px;    
-margin: -16px 0 0 -16px;}*/
+margin: -16px 0 0 -16px;}
