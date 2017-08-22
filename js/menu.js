@@ -26,8 +26,8 @@ window.onload = function(){
 	});
 	
 	/*PRELOADER*/
- var $preloader = $('#p_prldr'),
-    $svg_anm = $preloader.find('.svg_anm');
-    $preloader.delay(1400).fadeOut('slow');
+ // var $preloader = $('#p_prldr'),
+ //    $svg_anm = $preloader.find('.svg_anm');
+ //    $preloader.delay(1400).fadeOut('slow');
 }
 
