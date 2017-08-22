@@ -24,5 +24,8 @@ window.onload = function(){
 	$('.see-more').click(function(){
 	$(".more ").slideToggle();
 	});
-
+ var $preloader = $('#p_prldr'),
+    $svg_anm = $preloader.find('.svg_anm');
+    $preloader.delay(1000).fadeOut('slow');
 }
+

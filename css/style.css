@@ -908,3 +908,30 @@ MOBILE MENU*/
 
 
 /*PRELOADER*/
+#p_prldr{
+position: fixed;
+left: 0;
+top: 0;
+right:0;
+bottom:0;
+background: #343c4e;
+z-index: 30;}
+ 
+ 
+.contpre{
+width: 250px;
+height: 100px;
+position: absolute;
+left: 50%;top: 50%;
+margin-left:-125px;
+margin-top:-75px;
+text-align:center;
+}
+ 
+#p_prldr .svg_anm {
+position: absolute;
+width: 100px;
+height: 100px;
+background: url(../img/tail-spin.svg) center center no-repeat;
+background-size:100px;    
+margin: -16px 0 0 -16px;}
