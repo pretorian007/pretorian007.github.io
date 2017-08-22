@@ -3,11 +3,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var imagemin = require('gulp-imagemin');
 
+gulp.task('default', ['watch', 'live']);
 
 gulp.task('go', ['minimg', 'autocss']);
 
 gulp.task('watch', function() {
-	
         gulp.watch('css/*.css', ['autocss']); 
 
         
