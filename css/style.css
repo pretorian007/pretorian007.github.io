@@ -397,14 +397,14 @@ background-image: linear-gradient(150deg,rgb(83, 83, 83)0%, rgb(48, 48, 48)100%)
 
 .footer{
 	width: 100%;
-	color: #cbc8c8;
+	color: #f9f9f9;
 	padding: 90px 0 130px 0;
 	background-color: rgb(48, 48, 48);
 }
 .footer p{
 	font-size: 1.6rem;
 	margin-bottom: 10px;
-	color: #cbc8c8;
+	color: #f9f9f9;
 
 }
 .footer h4{
@@ -420,7 +420,7 @@ background-image: linear-gradient(150deg,rgb(83, 83, 83)0%, rgb(48, 48, 48)100%)
 .social-icons a{
 	margin-right: 30px;
 	text-decoration: none;	
-	color: #cbc8c8;
+	color: #f9f9f9;
 	font-size: 3.2rem;
 	-webkit-transition: .5s;
 	transition: .5s;
@@ -438,9 +438,9 @@ background-image: linear-gradient(150deg,rgb(83, 83, 83)0%, rgb(48, 48, 48)100%)
     text-decoration: none;
     border-radius: 20px;
     font-weight: 700;
-    border: 2px solid #cbc8c8;
+    border: 2px solid #f9f9f9;
     text-transform: uppercase;
-    color: #cbc8c8;
+    color: #f9f9f9;
     font-size: 1.6rem;
     margin-bottom: 14px;
     -webkit-transition: .5s;
@@ -762,7 +762,7 @@ MOBILE MENU*/
 	border-radius: 50%;
 	float: right;
 	width: 50%;
-	border: 5px solid #cbc8c8;
+	border: 5px solid #f9f9f9;
 
 }
 
