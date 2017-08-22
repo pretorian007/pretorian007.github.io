@@ -622,7 +622,13 @@ MOBILE MENU*/
 .m-menu li a:hover{
 	color: #f90;
 }
-
+.m-menu ul{
+	text-align: center;
+}
+.m-menu ul li{
+	text-align: center;
+	list-style: none;
+}
 .m-nemu-link{
 	display: none;
 }
@@ -915,7 +921,7 @@ top: 0;
 right:0;
 bottom:0;
 background: #343c4e;
-z-index: 30;}
+z-index: 99999;}
  
  
 .contpre{
