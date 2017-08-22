@@ -148,6 +148,7 @@ nav ul li a:hover{
 .header{
 	background: #343c4e;
 	background: url(../img/header-bg.jpg) no-repeat center center;
+	background-attachment: fixed;
 	height: 100vh;
 	background-size: cover;
 	color: #fff;
@@ -779,7 +780,7 @@ MOBILE MENU*/
 	border-radius: 20px;
 }
 .header-line{
-	height: 30px;
+	height: 40px;
 	width: 100%;
 	background: lightgrey;
 	text-align: center;
@@ -787,7 +788,7 @@ MOBILE MENU*/
 .header-line a{
 	text-decoration: none;
 	color: #000;
-	font-size: 2rem;
+	font-size: 2.6rem;
 	-webkit-transition: .5s;
 	transition: .5s;
 }
