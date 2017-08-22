@@ -167,7 +167,7 @@ nav ul li a:hover{
 	-ms-flex-pack: center; 
 	justify-content: center;
 	position: relative;
-	position: relative;
+
 }
 .header h1{
 	font-size: 7.6rem;
@@ -718,7 +718,7 @@ MOBILE MENU*/
 
 }
 .css-Content::before{
-	width: 71%;
+	width: 67%;
 
 }
 .less-Content::before{		
