@@ -702,6 +702,10 @@ MOBILE MENU*/
 
 }
 .less-Content::before{		
+	width: 35%;
+
+}
+.angular-Content::before{		
 	width: 15%;
 
 }
