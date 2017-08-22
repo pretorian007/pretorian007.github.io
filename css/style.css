@@ -143,23 +143,11 @@ nav ul li a:hover{
 
 /*end mob*/
 
-/*.header-overlay{
-opacity: 0.5;
-z-index: 0;
-position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-background-image: linear-gradient(150deg,rgb(83, 83, 83)0%, rgb(48, 48, 48)100%);
-}
-*/
-
 
 .header{
 
 	background: #343c4e;
-	background: url(../img/portfolio-background2.jpg) no-repeat center center;
+	background: url(../img/portfolio-background.jpg) no-repeat center center;
 	background-attachment: fixed;
 	height: 100vh;
 	background-size: cover;
