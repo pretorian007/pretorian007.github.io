@@ -534,9 +534,9 @@ MOBILE MENU*/
 	margin: 0;
 	z-index: 999;
 	padding: 0;
-/*	transition: .5s;*/
+	transition: .5s;
 	/*transform: translateX(100%);*/
-
+	/*opacity: 0;*/
 
 
 }

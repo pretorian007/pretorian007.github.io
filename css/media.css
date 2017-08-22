@@ -70,10 +70,6 @@
     flex-grow: 0;
   }
 }
-@media(min-width: 768px){
-  .m-nemu-link{
-    display: none;
-}
 
 
 
