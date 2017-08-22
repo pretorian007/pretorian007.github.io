@@ -623,10 +623,10 @@ MOBILE MENU*/
 	color: #f90;
 }
 .m-menu ul{
-	text-align: center;
-}
+	padding: 0;
+	}
 .m-menu ul li{
-	text-align: center;
+	
 	list-style: none;
 }
 .m-nemu-link{
