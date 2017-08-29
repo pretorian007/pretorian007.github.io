@@ -33,7 +33,7 @@ img{
     margin:0 auto;
     text-align: center;
     opacity: 0;
-    transition: opacity  1s ease;
+    transition: opacity  1.2s ease;
 }
 .app-loaded{
     opacity: 1;

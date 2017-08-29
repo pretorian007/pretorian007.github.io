@@ -26,7 +26,7 @@ var menu = $(".menu"),
 	$(".more ").slideToggle();
 	});
 
-
+$('skills-Content')
 });
 
 

@@ -1,0 +1,83 @@
+
+                    <ul class="nav" >
+                        <li ng-class="{active: panel.isSelected(1)}" ng-click="panel.selectTab(1)" >
+                          Description 
+                      </li>
+                      <li ng-class="{active: panel.isSelected(2)}" ng-click="panel.selectTab(2)" >
+                       Specification 
+                   </li>
+                   <li ng-class="{active: panel.isSelected(3)}" ng-click="panel.selectTab(3)" >Revievs  
+                   </li>
+               </ul>
+               <div class="panel" ng-show="panel.isSelected(1)">
+                <h4>Description </h4>
+                <blockquote>{{product.description}}</blockquote>               
+            </div>
+            <div class="panel" ng-show="panel.isSelected(2)">
+                <h4> Specification</h4>
+                <form action="" class="spec-form">
+                    <div class="field">
+                       <label class="label-spec" for="weight">Weight:</label>
+                       <input value="{{product.weight}}" type="text" id="weight" disabled />
+                   </div>
+                   <div class="field">
+                       <label class="label-spec" for="material">Material:</label>
+                       <input value="{{product.material}}" type="text" id="material" disabled />
+                   </div>
+                   <div class="field">
+                     <label class="label-spec" ng-model="yes">Shooting mode:</label>
+                     <input type="radio" name="spec" value="Automatic" ng-model="spec"  />Automatic 
+                     <input type="radio" name="spec" value="Semiautomatic" ng-model="spec"/>Semiautomatic <br>                                
+                 </div>
+             </form>
+
+         </div>
+
+         <div class="revievs" ng-show="panel.isSelected(3)">
+            <h4>Revievs </h4>
+            <blockquote ng-repeat="review in product.reviews">
+                <b>{{ review.stars }} <i class="fa fa-star"></i></b>
+                {{ review.body }}
+                <div>
+                    <i>– {{ review.author }}</i>
+                    <span>{{ review.date| date:"(dd.MM.yyyy)"}}</span>
+                </div>
+                <hr>
+
+            </blockquote>
+
+            <form  class="revievs-form" name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+            ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+
+            <div class="form-group">
+                <select class="form-control" ng-model="reviewCtrl.review.stars" ng-options="(stars+ ' ★ ' ) for stars in [5,4,3,2,1]" required>
+                    <option value="">Rate the product</option>
+                </select>
+            </div>
+
+
+            <div class="form-control">
+                <textarea
+                rows="5" cols="35"
+                class="review-body"
+                ng-model="reviewCtrl.review.body"
+                placeholder="Write a short review of the product..."
+                required></textarea>
+            </div>
+
+            <div class="form-group">
+                <input
+                class="form-control"
+                ng-model="reviewCtrl.review.author"
+                type="email"
+                placeholder="email@example.org"
+                required
+                />
+            </fieldset>
+
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </div>
+        </form>
+    </div>
+  </div>

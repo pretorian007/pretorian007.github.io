@@ -1,0 +1,9 @@
+
+  	<div class="img-wrap">
+ 		<img ng-src="{{ product.images[gallery.current] }}" />
+ 	</div>
+ 	<ul class="img-thumbnails">
+ 		<li class="small-image" ng-repeat="image in product.images track by $index ">
+ 			<img  ng-src="{{ image }}" ng-click="gallery.setCurrent($index)" />
+ 		</li>
+ 	</ul>
