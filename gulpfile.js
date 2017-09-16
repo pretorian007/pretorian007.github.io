@@ -3,11 +3,11 @@ var autoprefixer = require('gulp-autoprefixer');
 var server = require('gulp-server-livereload');
 var imagemin = require('gulp-imagemin');
 
-gulp.task('default', ['watch', 'live']);
+
 
 gulp.task('go', ['minimg', 'autocss']);
 
-gulp.task('watch', function() {
+gulp.task('watch', ['live'], function() {
         gulp.watch('css/*.css', ['autocss']); 
 
         
@@ -30,8 +30,7 @@ gulp.task('live', function() {
  
 gulp.task('minimg', () =>
     gulp.src('img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+
 );
 
 
@@ -42,5 +41,7 @@ gulp.task('autocss', () =>
             cascade: false
         }))
         .pipe(gulp.dest('dist/css'))
+                .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
 );
 

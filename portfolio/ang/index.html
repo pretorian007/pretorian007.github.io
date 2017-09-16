@@ -34,28 +34,24 @@
                 </span>
             </div>
 
-        <div class="items-grid" ng-controller="StoreController as store">   
+            <div class="items-grid" ng-controller="StoreController as store">   
 
-            <div class="item" ng-repeat="product in store.products | orderBy : orderProperty">      
+                <div class="item" ng-repeat="product in store.products | orderBy : orderProperty">      
 
-                       <product-title></product-title>
-            
-            
+                 <product-title></product-title>
 
-
-                   <product-gallery class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length ">
-                   </product-gallery>
-                
+                 <product-gallery class="gallery" ng-controller="GalleryController as gallery"  ng-show="product.images.length ">
+                 </product-gallery>
 
 
-                <button class="btn-buy" >Buy</button>
 
-                <product-panels ng-controller="PanelController as panel">
-                </product-panels>
-            </div>   
-        </div>
+                 <button class="btn-buy" >Buy</button>
 
-    </section>
- <script src="js/main.js"></script> 
-</body>
-</html>
+                 <product-panels></product-panels>
+             </div>   
+         </div>
+
+     </section>
+     <script src="js/main.js"></script> 
+ </body>
+ </html>

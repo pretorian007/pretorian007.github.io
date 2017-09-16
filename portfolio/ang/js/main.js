@@ -78,18 +78,6 @@ app.controller('StoreController', function ($scope, $timeout) {
 
 
 
-app.controller('PanelController', function () {
-    var t = 1;
-
-   this.selectTab = function (tab) {
-       t = tab;
-   };
-
-   this.isSelected = function (tab) {
-       return t == tab;
-   };
-
-});
 
 
 app.controller('GalleryController', function () {
@@ -140,10 +128,23 @@ app.directive('productGallery', function () {
     };
 });
 app.directive('productPanels', function () {
-    return {
-        restrict:    'E',
-        templateUrl: 'product-panels.html'
-    };
+  return {
+    restrict:    'E',
+    templateUrl: 'product-panels.html',
+    controller:function () {
+      this.tab = 1;
+
+      this.selectTab = function (tab) {
+       this.tab = tab;
+     };
+
+     this.isSelected = function (tab) {
+       return this.tab == tab;
+     };
+
+   },
+   controllerAs:'panel'
+ };
 });
 
 
