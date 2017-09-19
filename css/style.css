@@ -451,7 +451,7 @@ img{
 MOBILE MENU*/
 
 .close-menu{
-	z-index: 501;
+	z-index: 500;
 	display: none;
 	height: 40px;
 	width: 40px;
