@@ -104,5 +104,26 @@
 
 		</div>		
 	</div>
+	
+	<a rel="nofollow" style="font-size:50px;" class="test" href="/" >Viber</a> <br><br>
+  <a rel="nofollow" style="font-size:50px;" title="Telegram" href="tg://resolve?domain=pretorian0">Telegram</a><br><br>
+  <a rel="nofollow" style="font-size:50px;" href="https://api.whatsapp.com/send?phone=380969574415">Whatsapp</a>
+
+
+		<script>
+function soc(){
+	var test =  document.querySelector(".test")
+if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+   test.href = 'viber://chat?number=+380977652288'
+
+  } else if (/Android/i.test(navigator.userAgent)) {
+     test.href = 'viber://chat?number=380969574415'
+  }
+else{
+	test.href = 'viber://chat?number=+380969574415'
+}
+};
+document.addEventListener('DOMContentLoaded', soc());
+</script>
 </body>
 </html>
