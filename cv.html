@@ -104,5 +104,22 @@
 
 		</div>		
 	</div>
+	<script>
+function soc(){
+	var test =  document.querySelector(".test")
+if (/webOS|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+   test.href = 'viber://chat?number=380969574415'
+
+  } else if (/Android/i.test(navigator.userAgent)) {
+     test.href = 'viber://chat?number=380969574415'
+  }
+else{
+	test.href = 'viber://chat?number=380969574415'
+}
+};
+soc()
+</script>
+	<a style="font-size:50px;" class="test" href="">test</a>
+	
 </body>
 </html>
